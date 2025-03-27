@@ -1,9 +1,9 @@
 describe("Quiz End-to-End Tests", () => {
   beforeEach(() => {
     // Using default fixture
-    cy.intercept("GET", "/api/questions/random", {
-      fixture: "questions.json",
-    }).as("getQuestions");
+    //cy.intercept("GET", "/api/questions/random", {
+    // fixture: "questions.json",
+    // }).as("getQuestions");
     cy.visit("/");
   });
 

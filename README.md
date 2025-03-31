@@ -2,9 +2,10 @@
 
 ## Links
 
-- Link 🟢 VIDEO 🔹  🔹
+- Link 🟢 VIDEO 🔹 🔹
 
 - Link 🔴 GitHub Repository [MTS-sip Cypress Testing](https://github.com/MTS-sip/Cypress-Testing)
+
 ## Description
 
 Application allows user ...
@@ -21,15 +22,21 @@ Application allows user ...
 
 ### Usage & Testing
 
-- The functionality of this app is demonstrated in this video link: 
+- scripts<br>
+  🔹 For headless browser test<br>
+  npm run i<br>
+  npm run start:dev<br>
+  npm run test<br>
 
-- If ---
+🔹 For Cypress/Chrome browser<br>
+npm run server(if not already running)<br>
+npm run cypress
 
 ### Images
 
-Mock image 1
+Mock image 1<br>
 
-Mock image 2
+Mock image 1<br>
 
 ### License
 
@@ -55,7 +62,7 @@ Key technologies used for development:
 ### Contributing
 
 MTS-Sip [aka MPossible](https://github.com/MTS-sip)<br>
-RU BCS Instructer provided scaffolding and Dev/Starter Code 
+RU BCS Instructer provided scaffolding and Dev/Starter Code
 
 ### User Story
 
@@ -67,13 +74,14 @@ RU BCS Instructer provided scaffolding and Dev/Starter Code
 ### Acceptance Criteria
 
 🔹 GIVEN I am taking a tech quiz
+
 - WHEN I click the start button
-THEN the quiz starts and I am presented with a question<br>
+  THEN the quiz starts and I am presented with a question<br>
 - WHEN I answer a question
-THEN I am presented with another question<br>
+  THEN I am presented with another question<br>
 - WHEN all questions are answered
-THEN the quiz is over<br> 
+  THEN the quiz is over<br>
 - WHEN the quiz is over
-THEN I can view my score<br>
+  THEN I can view my score<br>
 - WHEN the quiz is over
-THEN I can start a new quiz<
+  THEN I can start a new quiz<

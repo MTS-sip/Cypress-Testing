@@ -3,17 +3,16 @@ import Quiz from '../../../client/src/components/Quiz';
 import { mount } from 'cypress/react18';
 
 describe("Quiz Component", () => {
-  const mockQuestions = [
-    {
-      question: "What is 2 + 2?",
-      answers: [
-        { text: "3", isCorrect: false },
-        { text: "4", isCorrect: true },
-        { text: "5", isCorrect: false },
-        { text: "6", isCorrect: false }
-      ]
-    }
-  ];
+  beforeEach(() => {
+    cy.intercept('GET', '/api/questions/random', { fixture: 'questions.json' }).as('getQuestions');
+
+  it("loads and starts the quiz", () => {
+    cy.mount(<Quiz />);
+    cy.get("button").contains("Start Quiz").click();
+    cy.wait("@getQuestions");
+    cy.contains("Which is the correct answer?").should("be.visible");
+  });
+});
 
   beforeEach(() => {
     cy.intercept('GET', '/api/questions/random', { body: mockQuestions }).as('getQuestions');

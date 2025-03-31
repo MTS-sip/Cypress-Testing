@@ -1,23 +1,19 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// https://vitejs.dev/config
+
+
 export default defineConfig({
   plugins: [react()],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/_tests_/setup.ts'
-  },
   server: {
-    port: 3001,
-    open: false,
+    port: 5173, 
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
-        secure: false,
-        changeOrigin: true
+        target: 'http://localhost:3001', // Express server
+        changeOrigin: true,
+        secure: false
       }
     }
   }
-})
+});
